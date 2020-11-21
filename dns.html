@@ -10,12 +10,9 @@ function pwn() {
     });
 }
 
-function foo() {
-    setTimeout(pwn, 30 * 1000);
-}
-
 </script>
 </head>
-<body onload="foo()">
+<body onload="pwn()">
+    <h1>Pwning...</h1>
 </body>
 </html>
